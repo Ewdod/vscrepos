@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        th, td {
+            padding: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>İş Başvuru Formu</h1>
+    
+    <form action="form_isleme.php" method="post">
+        <table>
+            <tr>
+                <th colspan="3">Kişisel Bilgilerim</th>
+            </tr>
+            <tr>
+                <td><label for="ad">Adınız:</label></td>
+                <td><input type="text" id="ad" name="ad" required></td>
+                <td rowspan="6"><img src="https://img.freepik.com/free-icon/user_318-563642.jpg?w=360" height="200" alt=""></td>
+            </tr>
+            <tr>
+                <td><label for="soyad">Soyadınız:</label></td>
+                <td><input type="text" id="soyad" name="soyad" required></td>
+                
+            </tr>
+            <tr>
+                <td><label for="email">E-posta Adresiniz:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefon">Telefon Numaranız:</label></td>
+                <td><input type="tel" id="telefon" name="telefon" required></td>
+            </tr>
+            <tr>
+                <td><label for="medeniDurum">Medeniz Durumunuz:</label></td>
+                <td><input type="radio" id="bekar" name="medeni_durum" value="bekar">
+                    <label for="bekar">Bekar</label>
+                    <input type="radio" id="evli" name="medeni_durum" value="evli">
+                    <label for="evli">Evli</label>
+                </td>  
+            </tr>
+            <tr>
+                <td><label for="ozgecmis">Özgeçmişiniz</label></td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td><label for="mesaj">Mesajınız:</label></td>
+                <td colspan="2"><textarea id="mesaj" name="mesaj" rows="4" cols="60"></textarea></td>
+            </tr>           
+        </table>
+        <br><br>
+        <table>
+            <tr>
+                <th colspan="5">Pozisyon İçin Gereken Bilgiler</th>
+            </tr>
+            <tr>
+                <td><label for="yabancıdil">Yabancı Dil</label></td>
+                <td><label for="okul">Mezun Olduğunuz Okul</label></td>
+                <td><label for="mezuniyetsenesi">Mezun Olunan Yıl</label></td>
+                <td><label for="mezuniyetpuani">Mezuniyet Puanı</label></td>
+            </tr>
+            <tr>
+                <td> <select>
+                    <option value="ingilizce">İngilizce</option> 
+                    <option value="fransizca">Fransızca</option>
+                    <option value="japonca">Japonca</option>
+                     </select>
+                </td>
+                <td> <select>
+                    <option value="itu">İTÜ</option> 
+                    <option value="odtu">ODTÜ</option>
+                    <option value="ytu">YTÜ</option>
+                     </select>
+                </td>
+                <td>
+                    <input type="date">
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Gönder">
+    </form>
+</body>
+</html>

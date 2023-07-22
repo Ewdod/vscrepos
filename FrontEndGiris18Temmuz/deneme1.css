@@ -1,0 +1,11 @@
+p {
+    color: rgb(239, 0, 0);
+    align-self: center;
+    display: inline;
+  }
+  body {
+    background-color: rgb(13, 0, 87);
+  }
+  #h11 {
+    color: rgb(0, 255, 191);
+  }

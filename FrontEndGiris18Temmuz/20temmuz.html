@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Sayfası</title>
+    <style>
+        /* Combinator ve Attribute Selector */
+        body > nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Pseudo-class ve Pseudo-elemen */
+        h2:first-child::first-letter {
+            color: #3366cc;
+            font-size: 36px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Attribute Selector */
+        a[href^="https"] {
+            color: #cc3300;
+            text-decoration: none;
+        }
+
+        /* pseudo-class kullanımı */
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        p {
+            line-height: 1.6;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Haberler</h1>
+    </header>
+
+    <nav>
+
+        <a href="#haber1">Haber 1</a> |
+        <a href="#haber2">Haber 2</a>
+    </nav>
+
+    <section>
+        <article id="haber1">
+            <!-- Combinator ve Attribute Selector  -->
+            <h2>Haber Başlığı 1</h2>
+            <p>
+                Haber içeriği burada yer alır. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                euismod
+                mi vel turpis fringilla, vel interdum felis rhoncus. Nullam auctor bibendum fermentum. Donec eu
+                convallis
+                mi. Vestibulum laoreet ex nec massa dignissim posuere. Integer malesuada nisl arcu, vitae
+                ullamcorper
+                orci
+                bibendum nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                turpis
+                egestas. Sed
+                ut mi consectetur, posuere sem in, dapibus turpis. Nam at ultrices mi. Praesent vestibulum
+                dapibus
+                ipsum, a
+                cursus erat pellentesque et. Cras facilisis egestas odio, a dapibus purus posuere in.
+            </p>
+            <p>
+                Haber içeriğinin devamı...
+            </p>
+        </article>
+
+        <article id="haber2">
+            <!-- Combinator ve Attribute Selector -->
+            <h2>Haber Başlığı 2</h2>
+            <p>
+                Haber içeriği burada yer alır. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                euismod
+                mi vel turpis fringilla, vel interdum felis rhoncus. Nullam auctor bibendum fermentum. Donec eu
+                convallis
+                mi. Vestibulum laoreet ex nec massa dignissim posuere. Integer malesuada nisl arcu, vitae
+                ullamcorper
+                orci
+                bibendum nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                turpis
+                egestas. Sed
+                ut mi consectetur, posuere sem in, dapibus turpis. Nam at ultrices mi. Praesent vestibulum
+                dapibus
+                ipsum, a
+                cursus erat pellentesque et. Cras facilisis egestas odio, a dapibus purus posuere in.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Telif Hakkı © 2023 Haber Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+
+</html>
