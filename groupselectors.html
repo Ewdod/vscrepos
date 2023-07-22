@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* GROUP SELECTORS
+        1 : (*) = tüm etiketler
+        2 : (p) = tüm p etiketleri
+        3 : (div p) = tüm içindeki tüm p etiketleri
+        4 : (div,p) = tüm div ve tüm p etiketleri
+        5 : (div > p) = üst etiketi div olan p
+        6 : (p ~ div) = p ile aynı seviyede tüm div
+        7 : (p + div) = p etiketinden sonra gelen tüm div
+ */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="p1">.container > paragraf 1</p>
+      <p class="p1">.container > paragraf 2</p>
+      <div class="box">
+        .container > box 1
+
+        <p class="p1">.container > paragraf 3</p>
+        <p class="p1">.container > paragraf 4</p>
+      </div>
+      <div class="box">.container > box 2</div>
+      <div class="box">.container > box 3</div>
+      <div>.container > div</div>
+    </div>
+    <p>paragraf 5</p>
+    <p>paragraf 5</p>
+
+    <div class="box">box 4</div>
+    <div class="box">box 5</div>
+  </body>
+</html>
