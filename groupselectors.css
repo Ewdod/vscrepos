@@ -7,3 +7,37 @@
         6 : (p ~ div) = p ile aynı seviyede tüm div
         7 : (p + div) = p etiketinden sonra gelen tüm div
  */
+/* {
+    border: 2px solid blue;
+ }/
+
+ /* p{
+    border: 2px solid red;
+ } /
+
+/ .container div.box{
+    border: 2px solid black;
+}
+
+ div p {
+    border: 2px solid orange;
+ } /
+
+/ div,p{
+    border: 2px solid green;
+}
+div.box,p{
+    border: 2px solid grey;
+} /
+
+/ div > p{
+    border: 2px solid brown;
+} /
+
+/ p~div{
+    border: 2px solid aquamarine;
+} /
+
+/ p+div{
+    border: 2px solid purple;
+} */
