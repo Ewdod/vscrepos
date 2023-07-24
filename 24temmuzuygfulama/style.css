@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+.MainKisim {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    max-width: 436px;
+    
+    
+}
+
+.tahta,.tahta1 {
+    
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000; 
+    float: left; 
+    margin: 1px; 
+    border-radius: 7px;
+}
+
+.tahta1:nth-child(1n) {
+    background-color: #b58863;
+}
+.brdr {
+    float: left;
+    border: 10px solid #000;
+    border-radius: 20px;
+   
+}
+
+/* div:nth-child(odd) {
+    background-color: #b58863;
+}
+
+div:nth-child(even) {
+    background-color: #f0d9b5;
+} */
