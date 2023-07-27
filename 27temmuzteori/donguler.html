@@ -1,0 +1,119 @@
+<script>
+  const yaz = (x) => document.write(x + "<br>");
+
+  const ciz = () => document.write("<hr>");
+
+  for (let i = 0; i < 10; i++) {
+    yaz(i);
+  }
+  ciz();
+
+  let i = 0;
+  while (i < 10) yaz(i++);
+
+  ciz();
+
+  // bir string karakterlerini alma
+
+  let s = "Merhaba";
+
+  for (const a of s) {
+    yaz(a);
+  }
+
+  // bir array elemanlarini alma
+  ciz();
+  let a = ["Ali", "Veli", "Ayse", "Fatma"];
+  for (const e of a) {
+    yaz(e);
+  }
+
+  // metot ile donme
+  ciz();
+  a.forEach((e) => yaz(e));
+
+  ciz();
+
+  [..."Merhaba"].forEach((e) => yaz(e));
+
+  ciz();
+
+  // do while dongusu
+  let j = 0;
+  do {
+    yaz(j++);
+  } while (j < 10);
+
+  ciz();
+
+  // break ve continue
+
+  for (let i = 0; i < 10; i++) {
+    if (i == 5) break;
+    yaz(i);
+  }
+
+  ciz();
+  // continue
+
+  for (let i = 0; i < 10; i++) {
+    if (i == 5) continue;
+    yaz(i);
+  }
+
+  // ++i ve i++ farki
+  // ++i once artirir sonra kullanir
+  // i++ once kullanir sonra artirir
+  
+
+  ciz();
+
+  // nesnenin property'lerini donme
+
+    let o = {
+        Id: 1,
+        Ad: "Ali",
+        Soyad: "Yilmaz",
+        yas: 33,
+    };
+    for (const key in o) {
+        yaz(key+":"+o[key]);
+    };
+
+    ciz();
+
+    //dongu icinde dongu
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < 5; j++) {
+            yaz(i+":"+j);
+        }
+    }
+
+    /*
+    
+    1 for
+
+    2 for in
+
+    3 for of sadece array ve stringlerde calisir
+
+    4 while
+
+    5 do while
+
+    6 forEach
+
+
+    
+    */
+   ciz();
+
+   // 1 den 10 kadar olan sayilari 7 hariç yazdirma
+
+    for (let i = 0; i < 10; i++) {
+         if(i==7) continue;
+         yaz(i);
+    }
+
+    // ozet continue ve break c# ile ayni
+</script>
