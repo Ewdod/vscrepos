@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js örnek2</title>
+</head>
+<body>
+    <label for="sayi1">sayi1</label>
+    <input type="text" id="sayi1" name="sayi1">
+    <label for="sayi2">sayi2</label>
+    <input type="text" id="sayi2" name="sayi2">
+
+    <input type="button" id="button" name="button" value="karsilastir" onclick="karsilastir()">
+    
+
+    <script>
+        function karsilastir() {
+            let sayi1 = parseInt(document.getElementById("sayi1").value);
+
+            // alert(typeof sayi1);
+
+            let sayi2 = parseInt(document.getElementById("sayi2").value);
+
+            if (sayi1 > sayi2) {
+                alert("Sayı 1, Sayı 2'den büyüktür.");
+            } else if (sayi1 < sayi2) {
+                alert("Sayı 1, Sayı 2'den küçüktür.");
+            } else {
+                alert("Sayı 1, Sayı 2'ye eşittir.");
+            }
+        }
+    </script>
+</body>
+</html>

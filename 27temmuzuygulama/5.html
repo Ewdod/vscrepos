@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js örnek2</title>
+</head>
+<body>
+    <label for="sayi">Sayı:</label>
+    <input type="text" id="sayi" name="sayi">
+    <input type="button" id="button" name="button" value="Kontrol Et" onclick="bulVeKontrolEt()">
+    
+    <script>
+        function bulVeKontrolEt() {
+            let sayi = parseInt(document.getElementById("sayi").value);
+
+            if (isNaN(sayi)) {
+                alert("Lütfen geçerli bir sayı girin.");
+                return;
+            }
+
+            if (sayi <= 1) {
+                alert("Lütfen 2 veya daha büyük bir sayı girin.");
+                return;
+            }
+
+            let asalMi = true;
+
+            for (let i = 2; i <= Math.sqrt(sayi); i++) {
+                if (sayi % i === 0) {
+                    asalMi = false;
+                    break;
+                }
+            }
+
+            if (asalMi) {
+                alert(sayi + " zaten asal bir sayıdır.");
+            } else {
+                let enBuyukAsal = 2;
+                for (let i = 3; i <= sayi; i++) {
+                    let asal = true;
+                    for (let j = 2; j <= Math.sqrt(i); j++) {
+                        if (i % j === 0) {
+                            asal = false;
+                            break;
+                        }
+                    }
+                    if (asal) {
+                        enBuyukAsal = i;
+                    }
+                }
+
+                alert(sayi + " sayısından küçük en büyük asal sayı: " + enBuyukAsal);
+            }
+        }
+    </script>
+</body>
+</html>

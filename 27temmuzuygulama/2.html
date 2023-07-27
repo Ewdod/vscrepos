@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js ornek2</title>
+</head>
+<body>
+    <label for="fiyat">Fiyat:</label>
+<input type="text" id="yazi" name="yazi">
+<input type="button" id="button" name="button" value="hesapla">
+    <script>
+    document.getElementById("button").onclick = function () {
+        let fiyat = document.getElementById("yazi").value;
+
+        document.write("<br>");
+        
+        document.write("Fiyat: " + Number(fiyat) * 1.2);
+        
+        // Number yerine parseInt(fiyat) oluyor
+    };
+    </script>
+</body>
+</html>

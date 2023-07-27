@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>js örnek2</title>
+  </head>
+  <body>
+    <label for="sayi1">sayi1 (Alt Limit)</label>
+    <input type="text" id="sayi1" name="sayi1" />
+    <label for="sayi2">sayi2 (Üst Limit)</label>
+    <input type="text" id="sayi2" name="sayi2" />
+
+    <input
+      type="button"
+      id="button"
+      name="button"
+      value="Hesapla"
+      onclick="karsilastirVeYazdir()"
+    />
+
+    <script>
+      function karsilastirVeYazdir() {
+        let altLimit = Number(document.getElementById("sayi1").value);
+        let ustLimit = Number(document.getElementById("sayi2").value);
+
+        
+
+        if (altLimit > ustLimit) {
+          alert("alt limit ust limitten buyuk olamaz");
+        } else {
+          let toplam = 0;
+          for (let i = altLimit; i <= ustLimit; i++) {
+            toplam += i;
+          }
+          document.write("Alt Limit: " + altLimit + "<br>");
+          document.write("Üst Limit: " + ustLimit + "<br>");
+          document.write(toplam);
+        }
+      }
+    </script>
+  </body>
+</html>
