@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ölçü Birimleri</title>
+    <style>
+        /* html elementinin font-size özelliği ne ise
+           1rem de ona eşittir! çoğu tarayıcıda default
+           değeri 16px'dir. */
+        html {
+            /* font-size: 40px; */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .kutu {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            font-size: 20px;
+        }
+
+        .cubuk1 {
+            height: 50px;
+            width: 50%;
+            background-color: blue;
+            color: white;
+        }
+
+        .cubuk2 {
+            height: 50px;
+            width: 160px;
+            background-color: orangered;
+            color: white;
+        }
+
+        .cubuk3 {
+            height: 50px;
+            width: 10rem;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        /* 1em = mevcut elementin font-size'ı */
+        .cubuk4 {
+            height: 50px;
+            width: 10em;
+            background-color: green;
+            color: white;
+        }
+
+        /* 1vw = (viewport width) / 100 */
+        .cubuk5 {
+            height: 50px;
+            width: 50vw;
+            background-color: darkorange;
+            color: white;
+        }
+
+        p.hello {
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hello">Merhaba</p>
+    <div class="kutu">
+        <div class="cubuk1">50%</div>
+        <div class="cubuk2">160px</div>
+        <div class="cubuk3">10rem</div>
+        <div class="cubuk4">10em</div>
+        <div class="cubuk5">50vw</div>
+        <!-- NEDEN 160px ile 10rem aynı boyutta? -->
+    </div>
+</body>
+
+</html>

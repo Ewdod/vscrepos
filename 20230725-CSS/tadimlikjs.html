@@ -1,0 +1,21 @@
+<style>
+    h1>span {
+        position: relative;
+        font-size: 3em;
+    }
+</style>
+
+<h1>
+    <span>Y</span><span>A</span><span>S</span><span>İ</span><span>N</span>
+</h1>
+
+<script>
+    let spanS = document.querySelector("h1>span:nth-child(3)");
+
+    function titre() {
+        spanS.style.top = (Math.random() * 8 - 4) + "px";
+        spanS.style.left = (Math.random() * 8 - 4) + "px";
+    }
+
+    setInterval(titre, 50);
+</script>

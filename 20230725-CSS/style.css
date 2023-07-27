@@ -1,0 +1,125 @@
+body {
+    background-color: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.mark-dark {
+    background-color: black;
+    color: white;
+    padding: 0 .5rem;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 2rem;
+}
+
+.col1 {
+    flex: 2;
+}
+
+.col2 {
+    flex: 1;
+}
+
+.box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-body {
+    padding: .8rem 1rem;
+}
+
+.box-image {
+    width: 100%;
+}
+
+.box-title {
+    margin: 0 0 .5rem 0;
+    font-weight: 600;
+}
+
+.box-text {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 2.5rem;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.post-body {
+    padding: .8rem 1rem;
+}
+
+.post-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.post-desc {
+    font-size: 1.1em;
+    margin-top: .4rem;
+}
+
+.post-date {
+    opacity: .5;
+}
+
+.post-text {
+    margin: 1rem 0;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.post-footer>button {
+    border: 1px solid #ccc;
+    padding: .8rem 1.2rem;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post-footer>button:hover {
+    background-color: #ccc;
+}
+
+.post-comments {
+    font-weight: 600;
+}
+
+.post-comment-count {
+    margin-left: .3rem;
+}
+
+.post-comment-count.nonzero {
+    border-radius: 50%;
+}
