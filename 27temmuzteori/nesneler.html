@@ -1,0 +1,38 @@
+<script>
+  const yaz = (s) => document.write(s + "<br>");
+
+  let insan = {
+    ad: "Ali",
+    yas: 33,
+    kunye: function () {
+      return `${this.ad} + " " + ${this.yas} yasinda`;
+    },
+  };
+
+  yaz(insan.kunye());
+  yaz(insan["kunye"]());
+  yaz(insan.ad);
+
+  // istersek sonradan ek yapabiliriz
+    insan.soyad = "Yilmaz";
+    yaz(insan.soyad);
+
+    // istersek sonradan silme yapabiliriz
+    delete insan.soyad;
+
+    // bir nesnenin property'lerini . ile erisebilecegimiz gibi [] ile de erisebiliriz
+    yaz(insan["ad"]);
+
+    let o2 = {
+        Id: 1,
+        Ad: "Ali",
+        Soyad: "Yilmaz",
+        yas: 33,
+
+    };
+
+    for (const kunye in o2) {
+        yaz(key+":"+o2[key]);
+    };
+    
+</script>

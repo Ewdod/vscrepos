@@ -18,15 +18,30 @@
       // basligin sonuna gulucuk eklemek istiyorum
       let baslik = document.querySelector("h1");
       baslik.innerHTML = baslik.innerHTML + " <em>:)</em>"; // innner html ile basligin icindeki html kodlarina erisiriz ve degistirebiliriz innertext ile sadece yaziyi degistirebiliriz
+
       let d1 = 3; //number
-      let d2 = '3'; //string hem tek tirnak hem cift tirnak kullanilabilir
+      let d2 = "3"; //string hem tek tirnak hem cift tirnak kullanilabilir
       let d3 = true; //boolean
       let d4 = null; //object
       let d5; //undefined
-      let d6 = [1,2,3,4,5]; //object
-      let d7 = {adi:'ali', soyadi:'veli'}; //object
-      let d8 = function(){console.log('merhaba')}; //function
+      let d6 = [1, 2, 3, 4, 5]; //object
+      let d7 = { adi: "ali", soyadi: "veli" }; //object
+      let d8 = function () {
+        console.log("merhaba");
+      }; //function
+      // == ile === arasindaki fark == sadece degerleri karsilastirir === hem degerleri hem de tipleri karsilastirir
+      let c = 1 == "1"; //true
+      let c2 = 1 === "1"; //false
+      let c3 = 1 == "s"; //false
+      let c4 = "2" * "3"; //6
+      let c5 = isNaN("s"); //true
+      let c6 = "4";
+      let c7 = +c6; //+ ile stringi number a cevirebiliriz
+      let c8 = true;
+      let c9 = +c8; //1
+      let c10 = true + true; //2
 
+      
     </script>
   </body>
 </html>
