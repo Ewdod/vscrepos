@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>js örnek2</title>
+  </head>
+  <body>
+    <label for="sayi">Sayı:</label>
+    <input type="text" id="sayi" name="sayi" />
+    <input
+      type="button"
+      id="button"
+      name="button"
+      value="Kontrol Et"
+      onclick="asaliBul()"
+    />
+
+    <script>
+      function asaliBul() {
+        let sayi = parseInt(document.getElementById("sayi").value);
+
+        if(sayi < 0 ){
+            alert("negatif sayilarda asallik bulunmaz");
+            return;
+        }
+
+        if (sayi % 2 == 0) {
+          alert(sayi + " sayisi asal degildir");
+        } else {
+          alert(sayi + " sayisi asaldir");
+        }
+      }
+    </script>
+  </body>
+</html>

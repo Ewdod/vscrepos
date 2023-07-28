@@ -6,46 +6,49 @@
 <body>
     <label for="sayi">Sayı:</label>
     <input type="text" id="sayi" name="sayi">
-    <input type="button" id="button" name="button" value="Kontrol Et" onclick="bulVeKontrolEt()">
+    <input type="button" id="button" name="button" value="Kontrol Et" onclick="asaliBul()">
     
     <script>
-        function bulVeKontrolEt() {
+        function asaliBul() {
             let sayi = parseInt(document.getElementById("sayi").value);
-
-            let asalMi = true;
-
             if (sayi <= 1) {
                 alert("2 veya daha buyuk bir sayi giriniz");
                 return;
             }
 
-            
+            let asalMi = true;
 
-            for (let i = 2; i <= Math.sqrt(sayi); i++) {
-                if (sayi % i === 0) {
+
+            for (let i = 2; i <= sayi / 2; i++) { 
+                if (sayi % i == 0) {
                     asalMi = false;
                     break;
                 }
             }
 
             if (asalMi) {
-                alert(sayi + "zaten asal bir sayidir.");
-            } else {
+                alert(sayi + " zaten asal bir sayidir");
+            } 
+            
+            else {
                 let enBuyukAsal = 2;
                 for (let i = 3; i <= sayi; i++) {
                     let asal = true;
-                    for (let j = 2; j <= Math.sqrt(i); j++) {
+
+                    for (let j = 2; j <= i / 2; j++) {
+
                         if (i % j === 0) {
                             asal = false;
                             break;
                         }
                     }
+                    
                     if (asal) {
                         enBuyukAsal = i;
                     }
                 }
 
-                alert(sayi + " sayisindan kucuk en buyuk sayi " + enBuyukAsal);
+                alert(sayi + " sayisindan kucuk en buyuk asal sayi " + enBuyukAsal);
             }
         }
     </script>
