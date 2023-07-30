@@ -1,4 +1,0 @@
-.pp-item:not(:last-child) {
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: gray;
+        position: relative;
+        border-radius: 20px;
+      }
+
+      .upper-box,
+      .lower-box {
+        position: absolute;
+      }
+
+      .upper-box {
+        background-color: black;
+        top: 0px;
+        left: 50px;
+        width: 400px;
+        height: 350px;
+        font-size: 40px;
+        color: white;
+        display: flex; /* Ekledik: Metni ortalamak için flexbox kullanıyoruz */
+        justify-content: center; /* Ekledik: Metni yatayda ortala */
+        align-items: center; /* Ekledik: Metni dikeyde ortala */
+      }
+
+      .lower-box {
+        background-color: darkolivegreen; /* Arka plan rengini beyaz yap */
+        width: 500px;
+        height: 100px;
+        bottom: 0px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center; /* Harf kutularını dikeyde ortala */
+        align-items: center; /* Harf kutularını yatayda ortala */
+      }
+
+      .letter-box {
+        flex: 1; /* Harf kutularını eşit genişlikte yap */
+        display: flex; /* Harfleri dikeyde hizalamak için flexbox kullanıyoruz */
+        justify-content: center; /* Harfleri yatayda ortala */
+        align-items: center; /* Harfleri dikeyde ortala */
+        font-size: 30px;
+        background-color: wheat;
+        margin: 15px; /* Harf kutucukları arasında 5px boşluk bırak */
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+      }
+      .button-box {
+        flex: 1; /* Harf kutularını eşit genişlikte yap */
+        display: flex; /* Harfleri dikeyde hizalamak için flexbox kullanıyoruz */
+        justify-content: center; /* Harfleri yatayda ortala */
+        align-items: center; /* Harfleri dikeyde ortala */
+        font-size: 30px;
+        background-color: wheat;
+        margin: 15px; /* Harf kutucukları arasında 5px boşluk bırak */
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper-box">ODEV 27</div>
+      <div class="lower-box">
+        <div class="button-box" id="button-box">ON</div>
+        <div class="letter-box" id="button-box1">A</div>
+        <div class="letter-box" id="button-box2">N</div>
+        <div class="letter-box" id="button-box3">K</div>
+        <div class="letter-box" id="button-box4">1</div>
+        <div class="letter-box" id="button-box5">3</div>
+      </div>
+    </div>
+
+    <script>
+      let acikmi = false;
+      const upperBox = document.querySelector(".upper-box");
+
+      const btnbox1 = document.querySelector("#button-box1");
+      const btnbox2 = document.querySelector("#button-box2");
+      const btnbox3 = document.querySelector("#button-box3");
+      const btnbox4 = document.querySelector("#button-box4");
+      const btnbox5 = document.querySelector("#button-box5");
+
+      document.getElementById("button-box").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "dugme acildi";
+          upperBox.style.backgroundColor = "black";
+          upperBox.style.color = "white";
+          acikmi = true;
+        } else {
+          acikmi = false;
+          upperBox.innerText = "dugme kapandi";
+
+          upperBox.style.backgroundColor = "black";
+          upperBox.style.color = "white";
+        }
+      };
+
+      document.getElementById("button-box1").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "once dugmeyi aciniz";
+        } else {
+          upperBox.innerText = "A";
+          upperBox.style.backgroundColor = "red";
+          upperBox.style.color = "white";
+        }
+      };
+
+      document.getElementById("button-box2").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "once dugmeyi aciniz";
+        } else {
+          upperBox.innerText = "N";
+          upperBox.style.color = "red";
+          upperBox.style.backgroundColor = "white";
+        }
+      };
+
+      document.getElementById("button-box3").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "once dugmeyi aciniz";
+        } else {
+          upperBox.innerText = "K";
+          upperBox.style.backgroundColor = "blue";
+          upperBox.style.color = "white";
+        }
+      };
+
+      document.getElementById("button-box4").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "once dugmeyi aciniz";
+        } else {
+          upperBox.innerText = "1";
+          upperBox.style.backgroundColor = "white";
+          upperBox.style.color = "blue";
+        }
+      };
+
+      document.getElementById("button-box5").onclick = function () {
+        if (acikmi == false) {
+          upperBox.innerText = "once dugmeyi aciniz";
+        } else {
+          upperBox.innerText = "3";
+          upperBox.style.backgroundColor = "darkgrey";
+          upperBox.style.color = "white";
+        }
+      };
+    </script>
+  </body>
+</html>
