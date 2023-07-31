@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fare Hareketi Takip</title>
+</head>
+<body>
+    <div id="konum">Konum: </div>
+
+    <script>
+        function takipEt(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            document.getElementById("konum").innerHTML ="Konum: " + "X: " + x + ", Y: " + y;
+        }
+
+        
+        document.onmousemove = takipEt;
+    </script>
+</body>
+</html>

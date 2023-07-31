@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kelime Arama ve Sayma</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="arananKelime"
+      placeholder="Aranacak kelimeyi girin"
+    />
+    <button onclick="ara()">Ara</button>
+    <p id="metin">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+      dolor omnis totam perspiciatis minus delectus eos dolore suscipit ratione
+      autem ducimus illo, at quisquam dolorem, dolorum est blanditiis mollitia
+      animi?
+    </p>
+    <p id="sonuc"></p>
+
+    <script>
+      function ara() {
+        let arananKelime = document
+          .getElementById("arananKelime")
+          .value.toLowerCase();
+        let metin = document.getElementById("metin").textContent.toLowerCase();
+        let kelimeSayisi = 0;
+        let index = metin.indexOf(arananKelime);
+
+        while (index !== -1) {
+          kelimeSayisi++;
+          index = metin.indexOf(arananKelime, index + 1);
+        }
+
+        document.getElementById("sonuc").innerHTML =
+          "Aranan kelime: " +
+          arananKelime +
+          "<br>" +
+          "Toplam sayı: " +
+          kelimeSayisi;
+      }
+    </script>
+  </body>
+</html>

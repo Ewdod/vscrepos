@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 36px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <table>
+        <tr>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+            <td onclick="oyna(this)"></td>
+        </tr>
+    </table>
+    <script>
+        var siradakiOyuncu = "X";
+        var tahta = [[null, null, null], [null, null, null], [null, null, null]];
+
+        function oyna(hucre) {
+            if (hucre.innerHTML !== "" || kazananKontrol()) {
+                return;
+            }
+
+            hucre.innerHTML = siradakiOyuncu;
+            var satir = hucre.parentElement.rowIndex;
+            var sutun = hucre.cellIndex;
+            tahta[satir][sutun] = siradakiOyuncu;
+
+            if (kazananKontrol()) {
+                alert(siradakiOyuncu + " kazandı!");
+                resetTahta();
+                return;
+            }
+
+            siradakiOyuncu = (siradakiOyuncu === "X") ? "O" : "X";
+        }
+
+        function kazananKontrol() {
+            for (var i = 0; i < 3; i++) {
+                if (tahta[i][0] !== null && tahta[i][0] === tahta[i][1] && tahta[i][0] === tahta[i][2]) {
+                    return true;
+                }
+                if (tahta[0][i] !== null && tahta[0][i] === tahta[1][i] && tahta[0][i] === tahta[2][i]) {
+                    return true;
+                }
+            }
+            if (tahta[0][0] !== null && tahta[0][0] === tahta[1][1] && tahta[0][0] === tahta[2][2]) {
+                return true;
+            }
+            if (tahta[0][2] !== null && tahta[0][2] === tahta[1][1] && tahta[0][2] === tahta[2][0]) {
+                return true;
+            }
+            return false;
+        }
+
+        function resetTahta() {
+            var hucreler = document.getElementsByTagName("td");
+            for (var i = 0; i < hucreler.length; i++) {
+                hucreler[i].innerHTML = "";
+            }
+            tahta = [[null, null, null], [null, null, null], [null, null, null]];
+            siradakiOyuncu = "X";
+        }
+    </script>
+</body>
+</html>
