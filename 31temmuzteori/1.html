@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    
+  </head>
+  <body>
+    <h1>Kisi listesi</h1>
+
+    <form id="frmAd">
+      <input type="text" name="q" id="ad" />
+      <button>ekle</button>
+    </form>
+    <ul id="adlar">
+        <li>Lorem.</li>
+        <li>Minus.</li>
+        <li>Quis.</li>
+    </ul>
+    <small><em>silinmesini istediginiz elemanin ustune cift tiklayiniz</em></small>
+
+    <script>
+      const frm = document.getElementById("frmAd");
+      const txtAd = document.getElementById("ad");
+      const ulAdlar = document.getElementById("adlar");
+
+        // mevcut liler icinde atama yapmamiz lazim
+        document.querySelectorAll("li").forEach( (x) => x.ondblclick = sil );
+
+      frm.onsubmit = function (event) {
+        event.preventDefault(); // formun teslimini onler
+        const li = document.createElement("li");
+        li.ondblclick  = sil;
+        // li.ondblclick  = () => ulAdlar.removeChild(li);
+        li.textContent = txtAd.value;
+        ulAdlar.appendChild(li);
+        txtAd.value = "";
+      };
+
+      function sil(event){
+        const li = event.target;
+        ulAdlar.removeChild(li);
+      }
+    </script>
+  </body>
+</html>
