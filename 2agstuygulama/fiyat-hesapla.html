@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fiyat Hesapla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fiyat Hesapla</h1>
+    <form id="fiyat-hesaplama-form">
+        <label for="ulke">Gidilecek Ülke:</label>
+        <select id="ulke">
+            <option value="finlandiya">Finlandiya</option>
+            <option value="estonya">Estonya</option>
+            <option value="alaska">Alaska</option>
+            <option value="norvec">Norveç</option>
+            <option value="kanada">Kanada</option>
+        </select>
+
+        <label for="kisi-sayisi">Kişi Sayısı:</label>
+        <input type="number" id="kisi-sayisi" min="1">
+
+        <button type="button" id="hesapla-btn">Hesapla</button>
+    </form>
+
+    <p id="sonuc"></p>
+
+    <a class="anasayfa-btn" href="index.html">Ana Sayfa'ya Dön</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

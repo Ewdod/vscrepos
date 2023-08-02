@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Yeni stiller */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tur-listesi {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.tur-listesi li {
+    width: 48%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tur-listesi li a {
+    color: #333;
+}
+
+.tur-listesi li img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
