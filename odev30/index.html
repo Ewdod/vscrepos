@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kedi Oyunu</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+
+        .visited {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-board">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+    <script>
+        let squares = document.getElementsByClassName('square');
+        let visitedSquares = [];
+        let currentSquare = null;
+
+        function getRandomSquare() {
+            let unvisitedSquares = [];
+            for (let i = 0; i < squares.length; i++) {
+                if (!visitedSquares.includes(i)) {
+                    unvisitedSquares.push(i);
+                }
+            }
+            if (unvisitedSquares.length === 0) {
+                return -1; // All squares have been visited
+            }
+            const randomIndex = Math.floor(Math.random() * unvisitedSquares.length);
+            return unvisitedSquares[randomIndex];
+        }
+
+        function visitSquare(squareIndex) {
+            if (currentSquare !== null) {
+                squares[currentSquare].classList.remove('visited');
+            }
+            visitedSquares.push(squareIndex);
+            currentSquare = squareIndex;
+
+            const catUnicode = "&#128049;"; // Kedi emoji Unicode
+            squares[squareIndex].innerHTML = catUnicode + "<br>" + visitedSquares.length.toString();
+            squares[squareIndex].classList.add('visited');
+        }
+
+        function gameLoop() {
+            let randomSquare = getRandomSquare();
+            if (randomSquare !== -1) {
+                visitSquare(randomSquare);
+                setTimeout(gameLoop, 1000);
+            } else {
+                alert("Oyun bitti! Tüm kareler ziyaret edildi.");
+            }
+        }
+
+        setTimeout(gameLoop, 1000);
+    </script>
+</body>
+</html>
