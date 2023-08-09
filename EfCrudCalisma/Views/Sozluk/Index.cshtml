@@ -1,0 +1,33 @@
+﻿@model List<Girdi>
+@{
+    ViewBag.Title = "Sozluk";
+}
+<h1>Sozluk</h1>
+<a asp-action="Yeni">Yeni Girdi</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Sozcuk</th>
+            <th>Anlam</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var girdi in Model)
+        {
+            <tr>
+                <td>@girdi.Id</td>
+                <td>@girdi.Sozcuk</td>
+                <td>@girdi.Anlam</td>
+                <td>
+                    <a asp-action="Sil" asp-route-id="@girdi.Id" class="btn btn-danger">Sil</a>
+                    <a asp-action="Duzenle" asp-route-id="@girdi.Id" class="btn btn-warning">Duzenle</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+﻿@model Girdi
+@{
+    ViewData["Title"] = "Duzenle";
+}
+<h1>Duzenle</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="Sozcuk">Sozcuk</label>
+        <input asp-for="Sozcuk" type="text" class="form-control" />
+        <span asp-validation-for="Sozcuk" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Anlam">Anlam</label>
+        <input asp-for="Anlam" type="text" class="form-control" />
+        <span asp-validation-for="Anlam" class="text-danger"></span>
+    </div>
+    <button class="btn btn-primary">Kaydet</button>
+    <a asp-action="Index" class="btn btn-secondary">Iptal</a>
+</form>

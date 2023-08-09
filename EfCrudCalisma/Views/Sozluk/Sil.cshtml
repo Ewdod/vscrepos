@@ -1,0 +1,12 @@
+﻿@model Girdi
+@{
+    ViewData["Title"] = "Silme Onay";
+}
+<h1>Silme Onay</h1>
+<p> &quot;@Model.Sozcuk&quot; silinecek</p>
+
+<form asp-action="Sil" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class=" btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Iptal</a>
+</form>
